@@ -35,4 +35,12 @@ public class CalculatorTest {
         String result = calculator.toString();
         assertEquals("-5.0", result);
     }
+
+    @Test
+    public void givenCalculatorAppWhenMultiplyWithFiveReturnZero() {
+        Calculator calculator = new Calculator();
+        calculator.multiply(5);
+        String result = calculator.toString();
+        assertEquals("0.0", result);
+    }
 }

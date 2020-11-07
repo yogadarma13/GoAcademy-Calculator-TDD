@@ -9,7 +9,7 @@ public class CalculatorTest {
     public void givenCalculatorAppWhenPrintReturnZero() {
         Calculator calculator = new Calculator();
         String result = calculator.toString();
-        assertEquals("0", result);
+        assertEquals("0.0", result);
     }
 
     @Test
@@ -17,6 +17,14 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         calculator.cancel();
         String result = calculator.toString();
-        assertEquals("0", result);
+        assertEquals("0.0", result);
+    }
+
+    @Test
+    public void givenCalculatorAppWhenAddWithFiveReturnFive() {
+        Calculator calculator = new Calculator();
+        calculator.add(5);
+        String result = calculator.toString();
+        assertEquals("5.0", result);
     }
 }

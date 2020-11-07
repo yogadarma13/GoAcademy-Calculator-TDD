@@ -2,18 +2,22 @@ package com.yogadarma.calculator;
 
 public class Calculator {
 
-    int result;
+    double result;
 
     public Calculator() {
-        this.result = 0;
+        this.result = 0.0;
     }
 
     public void cancel() {
-        this.result = 0;
+        this.result = 0.0;
+    }
+
+    public void add(int number) {
+        this.result += number;
     }
 
     @Override
     public String toString() {
-        return String.valueOf(result);
+        return String.format("%.1f", result);
     }
 }

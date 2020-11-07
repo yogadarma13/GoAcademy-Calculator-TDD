@@ -25,7 +25,11 @@ public class Calculator {
     }
 
     public void divide(int number) {
-        this.result /= number;
+        if (number == 0) {
+            this.result = 0.0;
+        } else {
+            this.result /= number;
+        }
     }
 
     @Override

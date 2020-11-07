@@ -45,9 +45,18 @@ public class CalculatorTest {
     }
 
     @Test
-    public void givenCalculatorAppWhenDivideWithFiveRetrunZero() {
+    public void givenCalculatorAppWhenDivideWithFiveReturnZero() {
         Calculator calculator = new Calculator();
         calculator.divide(5);
+        String result = calculator.toString();
+        assertEquals("0.0", result);
+    }
+
+    @Test
+    public void givenCalculatorAppWhenAddWithFiveAndDivideWithZeroReturnZero() {
+        Calculator calculator = new Calculator();
+        calculator.add(5);
+        calculator.divide(0);
         String result = calculator.toString();
         assertEquals("0.0", result);
     }

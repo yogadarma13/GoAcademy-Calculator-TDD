@@ -27,4 +27,12 @@ public class CalculatorTest {
         String result = calculator.toString();
         assertEquals("5.0", result);
     }
+
+    @Test
+    public void givenCalculatorAppWhenSubtractWithFiveReturnMinusFive() {
+        Calculator calculator = new Calculator();
+        calculator.subtract(5);
+        String result = calculator.toString();
+        assertEquals("-5.0", result);
+    }
 }

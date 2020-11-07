@@ -24,6 +24,10 @@ public class Calculator {
         this.result *= number;
     }
 
+    public void divide(int number) {
+        this.result /= number;
+    }
+
     @Override
     public String toString() {
         return String.format("%.1f", result);

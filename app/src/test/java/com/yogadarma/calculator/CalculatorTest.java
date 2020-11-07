@@ -43,4 +43,12 @@ public class CalculatorTest {
         String result = calculator.toString();
         assertEquals("0.0", result);
     }
+
+    @Test
+    public void givenCalculatorAppWhenDivideWithFiveRetrunZero() {
+        Calculator calculator = new Calculator();
+        calculator.divide(5);
+        String result = calculator.toString();
+        assertEquals("0.0", result);
+    }
 }
